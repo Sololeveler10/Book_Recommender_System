@@ -7,10 +7,14 @@ st.header('Books Recommended System using Machine Learning')
 # Load the pre-trained model and data
 with open('artifacts/model.pkl', 'rb') as file:
     model = pickle.load(file)
+with open('artifacts/book_names.pkl', 'rb') as file:
+    model = pickle.load(file)
+with open('artifacts/final_rating.pkl', 'rb') as file:
+    model = pickle.load(file)
+with open('artifacts/book_pivot.pkl', 'rb') as file:
+    model = pickle.load(file)
 
-books_name = pickle.load(open('artifacts/book_names.pkl', 'rb'))
-final_ratings = pickle.load(open('artifacts/final_rating.pkl', 'rb'))
-book_pivot = pickle.load(open('artifacts/book_pivot.pkl', 'rb'))
+
 
 def recommend_book(book_name):
     try:
